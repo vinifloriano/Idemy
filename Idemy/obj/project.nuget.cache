@@ -1,8 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "ukyiIP4GotaKWHuD559O2Chxa0LYS+C6ay0AgNBxH+6u4pU+C5lOJEEyAEVjyJg4Rx8VQ829oLN908UmttZFlw==",
+  "dgSpecHash": "5CixxuPYX9xir4gnB8Jyll8tBDkqxi1TcmYWiwzq3u+Os78PIVoSNMpQLwx2241rAGOFahKM3tHYy8hVfv8H9Q==",
   "success": true,
   "projectFilePath": "C:\\Users\\vinicius\\source\\repos\\Idemy\\Idemy\\Idemy.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\vinicius\\.nuget\\packages\\materialdesigncolors\\1.2.5\\materialdesigncolors.1.2.5.nupkg.sha512",
+    "C:\\Users\\vinicius\\.nuget\\packages\\materialdesignthemes\\3.1.2\\materialdesignthemes.3.1.2.nupkg.sha512"
+  ],
   "logs": []
 }

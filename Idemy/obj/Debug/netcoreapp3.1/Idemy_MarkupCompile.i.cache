@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NETCOREAPP;NETCOREAPP3_1
 C:\Users\vinicius\source\repos\Idemy\Idemy\App.xaml
-11151548125
+2657708454
 
 4-1656682277
-1921654412462
-MainWindow.xaml;
+194-1530016171
+Components\Player.xaml;MainWindow.xaml;
 
-False
+True
 

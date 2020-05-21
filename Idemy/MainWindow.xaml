@@ -4,9 +4,101 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Idemy"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Background="#161926"
+        Title="Idemy" Height="450" Width="800">
+    <Window.Resources>
+        <Style x:Key="RoundedButtonStyle" TargetType="{x:Type Button}">
+            <Setter Property="Margin" Value="0 5" />
+            <Setter Property="Width" Value="32" />
+            <Setter Property="Height" Value="32" />
+            <Setter Property="Padding" Value="0" />
+            <Setter Property="Cursor" Value="Hand" />
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border CornerRadius="25" Background="#C4C4C4">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0" />
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <Style x:Key="ButtonTextStyle" TargetType="{x:Type TextBlock}">
+            <Setter Property="Height" Value="18"/>
+            <Setter Property="Width" Value="18"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="TextAlignment" Value="Center"/>
+        </Style>
+        <Style x:Key="ButtonIconStyle" TargetType="materialDesign:PackIcon">
+            <Setter Property="Height" Value="22"/>
+            <Setter Property="Width" Value="22"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+        </Style>
+    </Window.Resources>
     <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="38"/>
+            <ColumnDefinition Width="3*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Border
+            Grid.Column="0"
+            Background="#2F3C4C"
+            CornerRadius="0 12 12 0">
+            <Grid>
+                <DockPanel VerticalAlignment="Top">
+                    <Button
+                    x:Name="btnMenu"
+                    Style="{StaticResource RoundedButtonStyle}">
+                        <materialDesign:PackIcon Kind="Menu" Style="{StaticResource ButtonIconStyle}" />
+                    </Button>
+                </DockPanel>
+                <DockPanel VerticalAlignment="Center">
+                    <StackPanel>
+                        <Button Style="{StaticResource RoundedButtonStyle}">
+                            <TextBlock Style="{StaticResource ButtonTextStyle}" Text="A"/>
+                        </Button>
+                        <Button Style="{StaticResource RoundedButtonStyle}">
+                            <TextBlock Style="{StaticResource ButtonTextStyle}" Text="B"/>
+                        </Button>
+                        <Button Style="{StaticResource RoundedButtonStyle}">
+                            <TextBlock Style="{StaticResource ButtonTextStyle}" Text="C"/>
+                        </Button>
+                        <Button Style="{StaticResource RoundedButtonStyle}">
+                            <TextBlock Style="{StaticResource ButtonTextStyle}" Text="D"/>
+                        </Button>
+                    </StackPanel>
+                </DockPanel>
+                <DockPanel VerticalAlignment="Bottom">
+                    <Button
+                    x:Name="btnTrash"
+                    Style="{StaticResource RoundedButtonStyle}">
+                        <materialDesign:PackIcon Kind="Trash" Foreground="#CC5555" Style="{StaticResource ButtonIconStyle}" />
+                    </Button>
+                </DockPanel>
+            </Grid>
+        </Border>
 
+
+        <Border
+            Grid.Column="2"
+            Background="#2F3C4C"
+            CornerRadius="12 0 0 12">
+            <Grid>
+                <DockPanel VerticalAlignment="Top">
+                    <StackPanel Orientation="Horizontal">
+                        <Button>
+                            <materialDesign:PackIcon Kind="" />
+                        </Button>
+                    </StackPanel>
+                </DockPanel>
+            </Grid>
+        </Border>
     </Grid>
 </Window>
