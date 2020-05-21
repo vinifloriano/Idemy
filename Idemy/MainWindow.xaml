@@ -19,7 +19,10 @@
                 <Setter.Value>
                     <ControlTemplate TargetType="Button">
                         <Border CornerRadius="25" Background="#C4C4C4">
-                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0" />
+                            <ContentPresenter 
+                                HorizontalAlignment="Center" 
+                                VerticalAlignment="Center" 
+                                Margin="0" />
                         </Border>
                     </ControlTemplate>
                 </Setter.Value>
@@ -28,7 +31,7 @@
         <Style x:Key="ButtonTextStyle" TargetType="{x:Type TextBlock}">
             <Setter Property="Height" Value="18"/>
             <Setter Property="Width" Value="18"/>
-            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="Foreground" Value="#333"/>
             <Setter Property="HorizontalAlignment" Value="Center"/>
             <Setter Property="VerticalAlignment" Value="Center"/>
             <Setter Property="TextAlignment" Value="Center"/>
@@ -36,7 +39,7 @@
         <Style x:Key="ButtonIconStyle" TargetType="materialDesign:PackIcon">
             <Setter Property="Height" Value="22"/>
             <Setter Property="Width" Value="22"/>
-            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="Foreground" Value="#333"/>
             <Setter Property="HorizontalAlignment" Value="Center"/>
             <Setter Property="VerticalAlignment" Value="Center"/>
         </Style>
@@ -56,22 +59,32 @@
                     <Button
                     x:Name="btnMenu"
                     Style="{StaticResource RoundedButtonStyle}">
-                        <materialDesign:PackIcon Kind="Menu" Style="{StaticResource ButtonIconStyle}" />
+                        <materialDesign:PackIcon 
+                            Kind="Menu" 
+                            Style="{StaticResource ButtonIconStyle}" />
                     </Button>
                 </DockPanel>
                 <DockPanel VerticalAlignment="Center">
                     <StackPanel>
                         <Button Style="{StaticResource RoundedButtonStyle}">
-                            <TextBlock Style="{StaticResource ButtonTextStyle}" Text="A"/>
+                            <TextBlock 
+                                Style="{StaticResource ButtonTextStyle}" 
+                                Text="A"/>
                         </Button>
                         <Button Style="{StaticResource RoundedButtonStyle}">
-                            <TextBlock Style="{StaticResource ButtonTextStyle}" Text="B"/>
+                            <TextBlock 
+                                Style="{StaticResource ButtonTextStyle}" 
+                                Text="B"/>
                         </Button>
                         <Button Style="{StaticResource RoundedButtonStyle}">
-                            <TextBlock Style="{StaticResource ButtonTextStyle}" Text="C"/>
+                            <TextBlock 
+                                Style="{StaticResource ButtonTextStyle}" 
+                                Text="C"/>
                         </Button>
                         <Button Style="{StaticResource RoundedButtonStyle}">
-                            <TextBlock Style="{StaticResource ButtonTextStyle}" Text="D"/>
+                            <TextBlock 
+                                Style="{StaticResource ButtonTextStyle}" 
+                                Text="D"/>
                         </Button>
                     </StackPanel>
                 </DockPanel>
@@ -79,7 +92,10 @@
                     <Button
                     x:Name="btnTrash"
                     Style="{StaticResource RoundedButtonStyle}">
-                        <materialDesign:PackIcon Kind="Trash" Foreground="#CC5555" Style="{StaticResource ButtonIconStyle}" />
+                        <materialDesign:PackIcon 
+                            Kind="Trash" 
+                            Foreground="#CC5555" 
+                            Style="{StaticResource ButtonIconStyle}" />
                     </Button>
                 </DockPanel>
             </Grid>
@@ -92,9 +108,33 @@
             CornerRadius="12 0 0 12">
             <Grid>
                 <DockPanel VerticalAlignment="Top">
-                    <StackPanel Orientation="Horizontal">
-                        <Button>
-                            <materialDesign:PackIcon Kind="" />
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch">
+                        <Button 
+                            Padding="0" 
+                            Margin="10" 
+                            Background="{x:Null}" 
+                            BorderBrush="{x:Null}" 
+                            BorderThickness="0" 
+                            Width="25" 
+                            Height="25">
+                            <materialDesign:PackIcon 
+                                Kind="ChevronRight" 
+                                Width="22" 
+                                Height="22" />
+                        </Button>
+                        <Button 
+                            HorizontalAlignment="Right"
+                            Padding="0" 
+                            Margin="10" 
+                            Background="{x:Null}" 
+                            BorderBrush="{x:Null}" 
+                            BorderThickness="0" 
+                            Width="25" 
+                            Height="25">
+                            <materialDesign:PackIcon 
+                                Kind="Settings" 
+                                Width="22" 
+                                Height="22" />
                         </Button>
                     </StackPanel>
                 </DockPanel>
