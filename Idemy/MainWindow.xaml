@@ -7,10 +7,10 @@
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         mc:Ignorable="d"
         Background="#161926"
-        Title="Idemy" Height="450" Width="800">
+        Title="Idemy" Height="800" Width="1200">
     <Window.Resources>
         <Style x:Key="RoundedButtonStyle" TargetType="{x:Type Button}">
-            <Setter Property="Margin" Value="0 5" />
+            <Setter Property="Margin" Value="0 2" />
             <Setter Property="Width" Value="32" />
             <Setter Property="Height" Value="32" />
             <Setter Property="Padding" Value="0" />
@@ -47,8 +47,8 @@
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="38"/>
-            <ColumnDefinition Width="3*"/>
             <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="250"/>
         </Grid.ColumnDefinitions>
         <Border
             Grid.Column="0"
@@ -101,28 +101,53 @@
             </Grid>
         </Border>
 
-
+        <StackPanel VerticalAlignment="Center" Grid.Column="1" Margin="2">
+            <Grid>
+                <MediaElement Source="C:/Users/vinicius/videos/idemy.m4v" />
+                <StackPanel VerticalAlignment="Bottom">
+                    <Slider Margin="5 2" />
+                    <StackPanel Orientation="Horizontal" Height="20">
+                        <Button Padding="0" Height="20" Background="{x:Null}" BorderBrush="{x:Null}" BorderThickness="0">
+                            <materialDesign:PackIcon Kind="SkipBackward"  />
+                        </Button>
+                        <Button Padding="0" Height="20" Background="{x:Null}" BorderBrush="{x:Null}" BorderThickness="0">
+                            <materialDesign:PackIcon Kind="Pause"  />
+                        </Button>
+                        <Button Padding="0" Height="20" Background="{x:Null}" BorderBrush="{x:Null}" BorderThickness="0">
+                            <materialDesign:PackIcon Kind="SkipForward"  />
+                        </Button>
+                        <Button Padding="0" Height="20" Background="{x:Null}" BorderBrush="{x:Null}" BorderThickness="0">
+                            <materialDesign:PackIcon Kind="VolumeHigh"  />
+                        </Button>
+                        <Slider Width="70" />
+                    </StackPanel>
+                </StackPanel> 
+            </Grid>
+  
+            <TextBlock Foreground="White">Learning how to build a super sample program!</TextBlock>
+        </StackPanel>
         <Border
             Grid.Column="2"
             Background="#2F3C4C"
             CornerRadius="12 0 0 12">
             <Grid>
                 <DockPanel VerticalAlignment="Top">
-                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch">
-                        <Button 
+                    <Button
+                            DockPanel.Dock="Left"
                             Padding="0" 
-                            Margin="10" 
+                            Margin="0 10" 
                             Background="{x:Null}" 
                             BorderBrush="{x:Null}" 
                             BorderThickness="0" 
                             Width="25" 
                             Height="25">
-                            <materialDesign:PackIcon 
-                                Kind="ChevronRight" 
-                                Width="22" 
-                                Height="22" />
-                        </Button>
-                        <Button 
+                        <materialDesign:PackIcon 
+                            Kind="ChevronRight" 
+                            Width="22" 
+                            Height="22" />
+                    </Button>
+                    <Button 
+                            DockPanel.Dock="Right"
                             HorizontalAlignment="Right"
                             Padding="0" 
                             Margin="10" 
@@ -131,13 +156,60 @@
                             BorderThickness="0" 
                             Width="25" 
                             Height="25">
-                            <materialDesign:PackIcon 
-                                Kind="Settings" 
+                        <materialDesign:PackIcon 
+                            Kind="Settings" 
+                            Width="22" 
+                            Height="22" />
+                    </Button>
+                    <Button 
+                                DockPanel.Dock="Right"
+                                HorizontalAlignment="Right"
+                                Padding="0" 
+                                Margin="10" 
+                                Background="{x:Null}" 
+                                BorderBrush="{x:Null}" 
+                                BorderThickness="0" 
+                                Width="25" 
+                                Height="25">
+                        <materialDesign:PackIcon 
+                                Kind="Folder" 
                                 Width="22" 
                                 Height="22" />
-                        </Button>
-                    </StackPanel>
+                    </Button>
                 </DockPanel>
+                <StackPanel Margin="5 40 5 0">
+                    <TextBlock Foreground="White" FontSize="18" TextTrimming="CharacterEllipsis">JavaScript Course</TextBlock>
+                    <TextBlock Margin="0 5 0 0" Foreground="#ccc" TextTrimming="CharacterEllipsis">Session 1</TextBlock>
+                    <Border Padding="4" Background="#384555" Margin="0 5 0 0" CornerRadius="5">
+                        <StackPanel>
+                            <TextBlock Margin="0" FontSize="8" Foreground="#21A54E">1/35</TextBlock>
+                            <TextBlock FontSize="10" Foreground="#aaa" TextAlignment="Center" TextTrimming="CharacterEllipsis">Learning how to buil a super sample program!</TextBlock>
+                            <TextBlock FontSize="8" Foreground="#0C75F3" TextAlignment="Right">35:05</TextBlock>
+                        </StackPanel>
+                    </Border>
+                    <Border Padding="4" Background="#384555" Margin="0 5 0 0" CornerRadius="5">
+                        <StackPanel>
+                            <TextBlock Margin="0" FontSize="8" Foreground="#21A54E">1/35</TextBlock>
+                            <TextBlock FontSize="10" Foreground="#aaa" TextAlignment="Center" TextTrimming="CharacterEllipsis">Learning how to buil a super sample program!</TextBlock>
+                            <TextBlock FontSize="8" Foreground="#0C75F3" TextAlignment="Right">35:05</TextBlock>
+                        </StackPanel>
+                    </Border>
+                    <Border Padding="4" Background="#384555" Margin="0 5 0 0" CornerRadius="5">
+                        <StackPanel>
+                            <TextBlock Margin="0" FontSize="8" Foreground="#21A54E">1/35</TextBlock>
+                            <TextBlock FontSize="10" Foreground="#aaa" TextAlignment="Center" TextTrimming="CharacterEllipsis">Learning how to buil a super sample program!</TextBlock>
+                            <TextBlock FontSize="8" Foreground="#0C75F3" TextAlignment="Right">35:05</TextBlock>
+                        </StackPanel>
+                    </Border>
+                    <TextBlock Margin="0 5 0 0" Foreground="#ccc" TextTrimming="CharacterEllipsis">Session 2</TextBlock>
+                    <Border Padding="4" Background="#384555" Margin="0 5 0 0" CornerRadius="5">
+                        <StackPanel>
+                            <TextBlock Margin="0" FontSize="8" Foreground="#21A54E">1/35</TextBlock>
+                            <TextBlock FontSize="10" Foreground="#aaa" TextAlignment="Center" TextTrimming="CharacterEllipsis">Learning how to buil a super sample program!</TextBlock>
+                            <TextBlock FontSize="8" Foreground="#0C75F3" TextAlignment="Right">35:05</TextBlock>
+                        </StackPanel>
+                    </Border>
+                </StackPanel>
             </Grid>
         </Border>
     </Grid>
