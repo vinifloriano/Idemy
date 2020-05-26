@@ -7,12 +7,12 @@
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         mc:Ignorable="d"
         Background="#161926"
-        Title="Idemy" Height="800" Width="1200">
+        Title="Idemy" Height="714" Width="1145" WindowStartupLocation="CenterScreen">
     <Window.Resources>
         <Style x:Key="RoundedButtonStyle" TargetType="{x:Type Button}">
-            <Setter Property="Margin" Value="0 2" />
-            <Setter Property="Width" Value="32" />
-            <Setter Property="Height" Value="32" />
+            <Setter Property="Margin" Value="0 3" />
+            <Setter Property="Width" Value="42" />
+            <Setter Property="Height" Value="42" />
             <Setter Property="Padding" Value="0" />
             <Setter Property="Cursor" Value="Hand" />
             <Setter Property="Template">
@@ -29,9 +29,10 @@
             </Setter>
         </Style>
         <Style x:Key="ButtonTextStyle" TargetType="{x:Type TextBlock}">
-            <Setter Property="Height" Value="18"/>
-            <Setter Property="Width" Value="18"/>
-            <Setter Property="Foreground" Value="#333"/>
+            <Setter Property="Height" Value="25"/>
+            <Setter Property="FontSize" Value="18" />
+            <Setter Property="FontWeight" Value="DemiBold" />
+            <Setter Property="Foreground" Value="#444"/>
             <Setter Property="HorizontalAlignment" Value="Center"/>
             <Setter Property="VerticalAlignment" Value="Center"/>
             <Setter Property="TextAlignment" Value="Center"/>
@@ -46,7 +47,7 @@
     </Window.Resources>
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="38"/>
+            <ColumnDefinition Width="48"/>
             <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="250"/>
         </Grid.ColumnDefinitions>
@@ -81,11 +82,13 @@
                                 Style="{StaticResource ButtonTextStyle}" 
                                 Text="C"/>
                         </Button>
-                        <Button Style="{StaticResource RoundedButtonStyle}">
-                            <TextBlock 
-                                Style="{StaticResource ButtonTextStyle}" 
-                                Text="D"/>
-                        </Button>
+                        <Canvas x:Name="canvasCard4" Margin="3 0" PreviewMouseLeftButtonUp="canvasCard4_MouseLeftButtonUp" PreviewMouseLeftButtonDown="Canvas_PreviewMouseLeftButtonDown" PreviewMouseMove="Canvas_PreviewMouseMove" Height="48">
+                            <Button x:Name="card4" Style="{StaticResource RoundedButtonStyle}">
+                                <TextBlock 
+                                    Style="{StaticResource ButtonTextStyle}" 
+                                    Text="D"/>
+                            </Button>
+                        </Canvas>
                     </StackPanel>
                 </DockPanel>
                 <DockPanel VerticalAlignment="Bottom">
@@ -109,6 +112,12 @@
                     LoadedBehavior="Manual"
                     Source="C:/Users/vinicius/videos/idemy.m4v" />
                 <StackPanel VerticalAlignment="Bottom">
+                    <StackPanel.Background>
+                        <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                            <GradientStop Color="#00000000" Offset="0"/>
+                            <GradientStop Color="#000" Offset="1"/>
+                        </LinearGradientBrush>
+                    </StackPanel.Background>
                     <Slider 
                         x:Name="seekBarPlayer" 
                         Thumb.DragStarted="seekBarPlayer_DragStarted" 
@@ -116,7 +125,8 @@
                         ValueChanged="seekBarPlayer_ValueChanged"
                         Foreground="Red"  
                         Margin="5 0" />
-                    <StackPanel Orientation="Horizontal" Height="40" VerticalAlignment="Center">
+                    <DockPanel>
+                        <StackPanel HorizontalAlignment="Right" Orientation="Horizontal" Height="40" VerticalAlignment="Center">
                         <Button Padding="0" Margin="5" Height="30" Background="{x:Null}" BorderBrush="{x:Null}" BorderThickness="0">
                             <materialDesign:PackIcon Kind="SkipBackward" Height="30" Width="30"  />
                         </Button>
@@ -130,7 +140,18 @@
                             <materialDesign:PackIcon Kind="VolumeHigh" Height="28" Width="28"  />
                         </Button>
                         <Slider Width="70" Margin="2 10" Maximum="100" Value="100" />
-                    </StackPanel>
+                        
+
+                        </StackPanel>
+                        <StackPanel HorizontalAlignment="Right" Orientation="Horizontal">
+                            <Button Width="30" DockPanel.Dock="Right" Padding="0" Margin="10 5" Height="30" Background="{x:Null}" BorderBrush="{x:Null}" BorderThickness="0">
+                                <materialDesign:PackIcon Kind="SquareOutline" Height="28" Width="28"  />
+                            </Button>
+                            <Button Width="30" DockPanel.Dock="Right" Padding="0" Margin="10 5" Height="30" Background="{x:Null}" BorderBrush="{x:Null}" BorderThickness="0">
+                                <materialDesign:PackIcon Kind="Fullscreen" Height="28" Width="28"  />
+                            </Button>
+                        </StackPanel>
+                    </DockPanel>
                 </StackPanel> 
             </Grid>
   

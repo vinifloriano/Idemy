@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MaterialDesignThemes.Wpf.Converters.CircularProgressBar;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -77,6 +78,29 @@ namespace Idemy
             else mainVideo.Pause();
             paused = !paused;
         }
+        Point startPoint;
+        private void Canvas_PreviewMouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            startPoint = e.GetPosition(null);
+            Canvas.SetZIndex(card4, 100);
+        }
 
+        private void Canvas_PreviewMouseMove(object sender, MouseEventArgs e)
+        {
+            Point mousePos = e.GetPosition(null);
+            Vector diff = startPoint - mousePos;
+
+            if (e.LeftButton == MouseButtonState.Pressed &&
+                (Math.Abs(diff.X) > SystemParameters.MinimumHorizontalDragDistance ||
+                Math.Abs(diff.Y) > SystemParameters.MinimumVerticalDragDistance))
+            {
+                Canvas.SetBottom(card4, diff.Y);
+            }
+        }
+
+        private void canvasCard4_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
+        {
+            Canvas.SetBottom(card4, 0);
+        }
     }
 }
