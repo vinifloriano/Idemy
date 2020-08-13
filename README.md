@@ -1,4 +1,4 @@
-<a href="#"><img src="Idemy.m4v" title="Idemy" alt="Idemy"></a>
+<img src="Idemy.m4v" alt="Idemy">
 
 # Idemy
 
@@ -86,7 +86,7 @@ let generateProject = project => {
 
 ### Clone
 
-- Clone this repo to your local machine using `https://github.com/fvcproductions/SOMEREPO`
+- Clone this repo to your local machine using `https://github.com/ViniciusFloriano/Idemy`
 
 ### Setup
 
